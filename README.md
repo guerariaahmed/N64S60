@@ -14,3 +14,5 @@
 * Options menu: ROM menu, Rescan, Reset, Pause, instr/frame ×2 or ÷2, info, help.
 * A first sanity check: copy `tools/testrom.z64` to `E:\N64\`.
   It fills the whole screen **red** (and runs ~25 FPU/integer self-tests).
+
+Use your legally owned dumped games!
