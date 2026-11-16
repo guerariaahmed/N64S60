@@ -1,0 +1,30 @@
+#ifndef N64S60_HRH
+#define N64S60_HRH
+
+/* Application UID (unprotected/test range -> works with self-signing).
+   Change it to your own UID if you get one from Symbian Signed. */
+#define KN64S60UidValue 0xE64B0001
+
+enum TN64S60Commands
+    {
+    ECmdRomMenu = 0x6001,
+    ECmdRescan,
+    ECmdReset,
+    ECmdPause,
+    ECmdFaster,
+    ECmdSlower,
+    ECmdToggleInfo,
+    ECmdCpuMode,
+    ECmdGpuMode,
+    ECmdTapStart,
+    ECmdTapA,
+    ECmdTapB,
+    ECmdDbgZ,
+    ECmdDbgAlpha,
+    ECmdDbgBilinear,
+    ECmdDbgEdge,
+    ECmdResolution,
+    ECmdHelp
+    };
+
+#endif

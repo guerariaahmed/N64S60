@@ -1,0 +1,55 @@
+NAME N64S
+
+#include <eikon.rh>
+#include <avkon.rh>
+#include <avkon.rsg>
+#include "N64S60.hrh"
+
+RESOURCE RSS_SIGNATURE
+    {
+    }
+
+RESOURCE TBUF r_default_document_name
+    {
+    buf = "";
+    }
+
+RESOURCE EIK_APP_INFO
+    {
+    menubar = r_n64_menubar;
+    cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+    }
+
+RESOURCE MENU_BAR r_n64_menubar
+    {
+    titles =
+        {
+        MENU_TITLE { menu_pane = r_n64_menu; }
+        };
+    }
+
+RESOURCE MENU_PANE r_n64_menu
+    {
+    items =
+        {
+        MENU_ITEM { command = ECmdRomMenu;    txt = "ROM menu"; },
+        MENU_ITEM { command = ECmdRescan;     txt = "Rescan ROMs"; },
+        MENU_ITEM { command = ECmdReset;      txt = "Reset"; },
+        MENU_ITEM { command = ECmdPause;      txt = "Pause / Resume"; },
+        MENU_ITEM { command = ECmdTapStart;   txt = "Tap START"; },
+        MENU_ITEM { command = ECmdTapA;       txt = "Tap A"; },
+        MENU_ITEM { command = ECmdTapB;       txt = "Tap B"; },
+        MENU_ITEM { command = ECmdCpuMode;    txt = "CPU: interpreter/cached"; },
+        MENU_ITEM { command = ECmdGpuMode;    txt = "GPU: interpreter/cached"; },
+        MENU_ITEM { command = ECmdResolution; txt = "Resolution 1.0/.9/.75/.5"; },
+        MENU_ITEM { command = ECmdFaster;     txt = "More instr/frame (x2)"; },
+        MENU_ITEM { command = ECmdSlower;     txt = "Fewer instr/frame (/2)"; },
+        MENU_ITEM { command = ECmdDbgZ;       txt = "Debug: z-test on/off"; },
+        MENU_ITEM { command = ECmdDbgAlpha;   txt = "Debug: alpha-test on/off"; },
+        MENU_ITEM { command = ECmdDbgBilinear; txt = "Debug: bilinear on/off"; },
+        MENU_ITEM { command = ECmdDbgEdge;    txt = "Debug: edges wide/exact"; },
+        MENU_ITEM { command = ECmdToggleInfo; txt = "Show / hide info"; },
+        MENU_ITEM { command = ECmdHelp;       txt = "Key help"; },
+        MENU_ITEM { command = EAknCmdExit;    txt = "Exit"; }
+        };
+    }

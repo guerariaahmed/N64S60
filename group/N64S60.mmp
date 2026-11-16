@@ -1,0 +1,51 @@
+// N64S60 - N64 emulator for S60 3rd Edition (Symbian 9.1/9.2/9.3)
+
+TARGET          N64S60.exe
+TARGETTYPE      exe
+UID             0x100039CE 0xE64B0001
+SECUREID        0xE64B0001
+VENDORID        0
+CAPABILITY      NONE
+
+EPOCSTACKSIZE   0x14000
+EPOCHEAPSIZE    0x100000 0x1000000
+
+OPTION GCCE     -O3 -fomit-frame-pointer
+OPTION ARMCC    -O3 -Otime
+
+SOURCEPATH      ..\src
+SOURCE          N64S60App.cpp
+SOURCE          N64S60Document.cpp
+SOURCE          N64S60AppUi.cpp
+SOURCE          N64S60Container.cpp
+SOURCE          N64S60Engine.cpp
+SOURCE          n64core.cpp
+SOURCE          n64cpu.cpp
+SOURCE          n64rsp.cpp
+SOURCE          n64rdp.cpp
+
+SOURCEPATH      ..\data
+START RESOURCE  N64S60.rss
+HEADER
+TARGETPATH      resource\apps
+END
+
+START RESOURCE  N64S60_reg.rss
+TARGETPATH      \private\10003a3f\apps
+END
+
+USERINCLUDE     ..\inc
+SYSTEMINCLUDE   \epoc32\include
+
+LIBRARY         euser.lib
+LIBRARY         apparc.lib
+LIBRARY         cone.lib
+LIBRARY         eikcore.lib
+LIBRARY         eikcoctl.lib
+LIBRARY         avkon.lib
+LIBRARY         bafl.lib
+LIBRARY         efsrv.lib
+LIBRARY         fbscli.lib
+LIBRARY         bitgdi.lib
+LIBRARY         gdi.lib
+LIBRARY         ws32.lib

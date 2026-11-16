@@ -1,0 +1,9 @@
+#include <appinfo.rh>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0xE64B0001
+
+RESOURCE APP_REGISTRATION_INFO
+    {
+    app_file = "N64S60";
+    }

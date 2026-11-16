@@ -1,0 +1,14 @@
+&EN
+
+
+#{"N64S60"},(0xE64B0001),1,1,0
+%{"Vendor11"}
+:"Vendor11"
+
+
+[0x101F7961], 0, 0, 0, {"S60ProductID"}
+[0x102032BE], 0, 0, 0, {"S60ProductID"}
+
+"C:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\gcce\urel\N64S60.exe"-"!:\sys\bin\N64S60.exe"
+"C:\Symbian\9.2\S60_3rd_FP1\Epoc32\data\z\resource\apps\N64S60.rsc"-"!:\resource\apps\N64S60.rsc"
+"C:\Symbian\9.2\S60_3rd_FP1\Epoc32\data\z\private\10003a3f\apps\N64S60_reg.rsc"-"!:\private\10003a3f\import\apps\N64S60_reg.rsc"
